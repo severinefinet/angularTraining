@@ -1,12 +1,17 @@
-<div>
-  Title: <input type="text" />
+<div *ngIf="formation">
+  <div>
+    Title: <input type="text" />
+  </div>
+  <div>
+    Description: <input type="text" />
+  </div>
+  <div>
+    Date debut: <input type="text" />
+  </div>
+  <div>
+    Date fin: <input type="text" />
+  </div>
 </div>
-<div>
-  Description: <input type="text" />
-</div>
-<div>
-  Date debut: <input type="text" />
-</div>
-<div>
-  Date fin: <input type="text" />
+<div *ngIf="!formation">
+  Awesome loader...
 </div>
