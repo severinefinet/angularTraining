@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Formation } from '../models/Formation.model';
+import { BlagueService } from '../blague.service';
 
 @Component({
   selector: 'app-list-formation',
@@ -11,9 +12,15 @@ export class ListFormationComponent implements OnInit {
   @Input()
   formations: Formation[] = [];
 
-  constructor() { }
+  blague = '';
+
+  constructor(private blagueService: BlagueService) { }
 
   ngOnInit() {
+    this.blagueService.blagueSubject.next('blague marrante');
+    // this.blagueService.blagueSubject.subscribe((b: string) => {
+    //   this.blague = b;
+    // })
   }
 
 }
