@@ -19,36 +19,11 @@ export class FormationComponent implements OnInit {
       startDate: new Date(Date.now()),
       endDate: new Date(Date.now())
     }
-    this.formations = [
-      {
-        title: 'MyFirstFormation1',
-        description: "Sur Angular1",
-        startDate: new Date(Date.now()),
-        endDate: new Date(Date.now())
-      },
-      {
-        title: 'MyFirstFormation2',
-        description: "Sur Angular2",
-        startDate: new Date(Date.now()),
-        endDate: new Date(Date.now())
-      },
-      {
-        title: 'MyFirstFormation3',
-        description: "Sur Angular3",
-        startDate: new Date(Date.now()),
-        endDate: new Date(Date.now())
-      },
-      {
-        title: 'MyFirstFormation4',
-        description: "Sur Angular4",
-        startDate: new Date(Date.now()),
-        endDate: new Date(Date.now())
-      }
-    ]
+    this.formations = [this.formation]
   }
 
   envoyerFormationAuServeur(formation: Formation) {
     this.formation = formation;
-    console.log('Parent', formation)
+    this.formations.push(formation);
   }
 }
