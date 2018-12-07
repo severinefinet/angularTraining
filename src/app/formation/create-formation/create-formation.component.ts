@@ -12,7 +12,9 @@ export class CreateFormationComponent implements OnInit {
   formation: Formation;
   // Si autres parametres in, placer le décorateur
   // @Input()
-  // var2: Type;
+  // var2: Type
+
+  test: String = "I am the test !";
 
   @Output() // Ce qui sort
   formationChange: EventEmitter<Formation> = new EventEmitter<Formation>();
@@ -23,7 +25,8 @@ export class CreateFormationComponent implements OnInit {
     setTimeout(() => {
       this.formation = {
         title: "Angulaaar"
-      }
+      };
+      this.test = "Hello ya :D";
     }, 3000);
   }
 }

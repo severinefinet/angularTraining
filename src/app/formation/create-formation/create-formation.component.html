@@ -1,4 +1,16 @@
-<div *ngIf="formation">
+<!-- One way binding (Du TS à HTML, à sens unique)  -->
+<label>{{ test }}</label>
+<br/>
+
+<!-- Input binding (Du TS à HTML, à sens unique) -->
+<input [value]="test" />
+<br/><br/>
+
+<!-- Double binding (TS <-> HTML, double sens) -->
+<!-- Va aller modifier la variable test dans le controller/composant -->
+<input [(ngModel)]="test"/>
+
+<div>
   <div>
     Title: <input type="text" />
   </div>
@@ -11,7 +23,7 @@
   <div>
     Date fin: <input type="text" />
   </div>
-</div>
-<div *ngIf="!formation">
-  Awesome loader...
+  <div>
+    <button>Enregistrer</button>
+  </div>
 </div>
