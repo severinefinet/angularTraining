@@ -1,3 +1,17 @@
+# Super formation ! :D
+
+## personal notes
+
+3 Types de binding
+- One-way binding --> {{ <myVar> }} (TS --> HTML)
+- Input --> [tag]="<myVar>" (TS --> HTML) // Spécifique pour passer des valeurs dans les tags html (Ex: input-->Value)
+- Bannana binding --> [(ngModel)]="<myVar>" (TS <--> HTML)
+
+Ressources
+- https://www.learnrxjs.io/operators/
+- https://rxviz.com/
+- https://www.typescriptlang.org/play/
+
 # Training
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
