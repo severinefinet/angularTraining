@@ -1,4 +1,4 @@
 <div *ngFor="let formation of formations">
-  <h4>{{ formation.title }}</h4>
+  <h4>{{ formation | formationTitlePipe: "**" }}</h4>
   <p>{{ formation.description }}</p>
 </div>

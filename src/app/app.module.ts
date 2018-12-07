@@ -9,6 +9,7 @@ import { FormationComponent } from './formation/formation.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { CreateFormationComponent } from './formation/create-formation/create-formation.component';
 import { ListFormationComponent } from './formation/list-formation/list-formation.component';
+import { FormationTitlePipe } from './formation/list-formation/pipes/formation-title.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ListFormationComponent } from './formation/list-formation/list-formatio
     FormationComponent,
     UtilisateurComponent,
     CreateFormationComponent,
-    ListFormationComponent
+    ListFormationComponent,
+    FormationTitlePipe
   ],
   imports: [
     BrowserModule,
