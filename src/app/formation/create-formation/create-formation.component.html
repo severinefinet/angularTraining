@@ -25,6 +25,7 @@
     Date fin: <input type="text" formControlName="endDate"/>
   </div>
   <div>
-    <button (click)="saveFormation()">Enregistrer</button>
+    <button (click)="saveFormation()"
+            [disabled]="!formationFormGroup.valid">Enregistrer</button>
   </div>
 </form>
