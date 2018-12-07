@@ -21,6 +21,7 @@ export class FormationComponent implements OnInit {
   }
 
   envoyerFormationAuServeur(formation: Formation) {
+    this.formation = formation;
     console.log('Parent', formation)
   }
 }

@@ -25,12 +25,12 @@ export class CreateFormationComponent implements OnInit {
   }
 
   saveFormation() {
-    console.log('child')
+    console.log('child', this._formation)
     this.formationChange.emit(this._formation);
   }
 
   validateInput(f: Formation) {
-    if(f) this._formation = f;
+    if (f) this._formation = f;
     else this._formation = {};
   }
 }
