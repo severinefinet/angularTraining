@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Formation } from './models/Formation.model';
 
 @Component({
   selector: 'app-formation',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormationComponent implements OnInit {
 
+  formation: Formation;
   constructor() { }
 
   ngOnInit() {
+    this.formation = {
+      title: 'MyFirstFormation',
+      description: "Sur Angular",
+      startDate: new Date(Date.now()),
+      endDate: new Date(Date.now())
+    }
   }
 
+  envoyerFormationAuServeur(formation: Formation) {
+    console.log('Parent', formation)
+  }
 }

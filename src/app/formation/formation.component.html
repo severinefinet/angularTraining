@@ -1,4 +1,7 @@
 <p>
   Je suis une grosse formation
 </p>
-<app-create-formation></app-create-formation>
+<app-create-formation
+  [formation]="formation"
+  (saveFormation)="envoyerFormationAuServeur($event)">
+</app-create-formation>

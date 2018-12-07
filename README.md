@@ -7,6 +7,8 @@
 - Input --> [tag]="<myVar>" (TS --> HTML) // Spécifique pour passer des valeurs dans les tags html (Ex: input-->Value)
 - Bannana binding --> [(ngModel)]="<myVar>" (TS <--> HTML)
 
+Output d'un composant --> ()="<function>"
+
 Ressources
 - https://www.learnrxjs.io/operators/
 - https://rxviz.com/

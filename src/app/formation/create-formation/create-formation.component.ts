@@ -8,25 +8,29 @@ import { Formation } from '../models/Formation.model';
 })
 export class CreateFormationComponent implements OnInit {
 
-  @Input() // Ce qui rentre
-  formation: Formation;
-  // Si autres parametres in, placer le décorateur
-  // @Input()
-  // var2: Type
-
-  test: String = "I am the test !";
+  @Input()
+  set formation(f: Formation) {
+    this.validateInput(f);
+  }
 
   @Output() // Ce qui sort
   formationChange: EventEmitter<Formation> = new EventEmitter<Formation>();
 
+  _formation: Formation;
+  test: String = "I am the test !";
+
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.formation = {
-        title: "Angulaaar"
-      };
-      this.test = "Hello ya :D";
-    }, 3000);
+  }
+
+  saveFormation() {
+    console.log('child')
+    this.formationChange.emit(this._formation);
+  }
+
+  validateInput(f: Formation) {
+    if(f) this._formation = f;
+    else this._formation = {};
   }
 }
