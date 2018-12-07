@@ -10,6 +10,8 @@ export class FormationComponent implements OnInit {
 
   formation: Formation;
   formations: Formation[];
+  mesFormations: Formation[];
+
   constructor() { }
 
   ngOnInit() {
@@ -20,6 +22,9 @@ export class FormationComponent implements OnInit {
       endDate: new Date(Date.now())
     }
     this.formations = [this.formation]
+    this.mesFormations = [
+      this.formation, this.formation
+    ];
   }
 
   envoyerFormationAuServeur(formation: Formation) {

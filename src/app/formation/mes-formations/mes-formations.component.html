@@ -1,0 +1,4 @@
+<div *ngFor="let formation of formations" style="background-color: green">
+  <h4>{{ formation | formationTitlePipe: "**" }}</h4>
+  <p>{{ formation.description }}</p>
+</div>

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Formation } from '../../models/Formation.model';
+import { Formation } from '../models/Formation.model';
 
 @Pipe({
   name: 'formationTitlePipe'
