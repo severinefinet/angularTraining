@@ -11,20 +11,20 @@
 <input [(ngModel)]="test"/>
 <br/><br/>
 
-<div>
+<form [formGroup]="formationFormGroup">
   <div>
-    Title: <input type="text" [(ngModel)]="_formation.title"/>
+    Title: <input type="text" formControlName="title"/>
   </div>
   <div>
-    Description: <input type="text" [(ngModel)]="_formation.description"/>
+    Description: <input type="text" formControlName="description"/>
   </div>
   <div>
-    Date debut: <input type="text" [(ngModel)]="_formation.startDate"/>
+    Date debut: <input type="text" formControlName="startDate"/>
   </div>
   <div>
-    Date fin: <input type="text" [(ngModel)]="_formation.endDate"/>
+    Date fin: <input type="text" formControlName="endDate"/>
   </div>
   <div>
     <button (click)="saveFormation()">Enregistrer</button>
   </div>
-</div>
+</form>
