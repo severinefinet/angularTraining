@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { FormationComponent } from './formation/formation.component';
 import { UtilisateurComponent } from './utilisateur/utilisateur.component';
 import { CreateFormationComponent } from './formation/create-formation/create-formation.component';
+import { ListFormationComponent } from './formation/list-formation/list-formation.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CreateFormationComponent } from './formation/create-formation/create-fo
     AppComponent,
     FormationComponent,
     UtilisateurComponent,
-    CreateFormationComponent
+    CreateFormationComponent,
+    ListFormationComponent
   ],
   imports: [
     BrowserModule,
