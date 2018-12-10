@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateFormationComponent } from './formation/create-formation/create-formation.component';
 import { ListFormationComponent } from './formation/list-formation/list-formation.component';
+import { FormationComponent } from './formation/formation.component';
 
 const routes: Routes = [
   {
     path: 'formation',
-    component: ListFormationComponent,
+    component: FormationComponent,
     children: [
       {
         path: 'create',
