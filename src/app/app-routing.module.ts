@@ -6,6 +6,11 @@ import { FormationComponent } from './formation/formation.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'formation/create',
+    pathMatch: 'full'
+  },
+  {
     path: 'formation',
     component: FormationComponent,
     children: [
