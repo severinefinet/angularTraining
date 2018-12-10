@@ -17,10 +17,9 @@ export class ListFormationComponent implements OnInit {
   constructor(private blagueService: BlagueService) { }
 
   ngOnInit() {
-    this.blagueService.blagueSubject.next('blague marrante');
-    // this.blagueService.blagueSubject.subscribe((b: string) => {
-    //   this.blague = b;
-    // })
+    this.blagueService.blagueSubject.subscribe((b: string) => {
+      this.blague = b;
+    })
   }
 
 }
